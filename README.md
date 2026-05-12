@@ -97,8 +97,3 @@ The lifecycle uses TestNG `dependsOnMethods` so a failure in any step skips down
 - **Random test data:** Datafaker per-run; uncovered hardcoding bugs surface immediately.
 - **Allure auto-attachment:** `AllureRestAssured` filter is registered inside `RequestSpecs.defaultSpec()` so every request and response body lands in the report without per-test wiring.
 
-## Out of scope (deliberate)
-- Parallel execution — lifecycle is sequential by design.
-- Negative-path coverage beyond post-delete 404 — the brief specifies the lifecycle.
-- Retry / flakiness mitigation — would mask real failures.
-- Dockerization or hosted CI — runs locally via Maven.
